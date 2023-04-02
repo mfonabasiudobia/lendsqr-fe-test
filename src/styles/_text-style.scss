@@ -97,3 +97,9 @@ $text-alignment-list : left, right, center, justify, start, end;
   }
 
 }
+
+.hover\:underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
