@@ -1,0 +1,63 @@
+@mixin padding($size : 1rem) {
+  padding-left: $size;
+  padding-right: $size
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media only screen and (min-width: 640px) {
+    max-width: 640px;
+    @include padding;
+  }
+
+  @media only screen and (min-width: 768px) {
+    max-width: 768px;
+    @include padding(1.5rem);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    max-width: 1024px;
+    @include padding(1.5rem);
+  }
+
+  @media only screen and (min-width: 1140px) {
+    max-width: 1140px;
+    @include padding(2rem);
+  }
+
+  @media only screen and (min-width: 1536px) {
+    max-width: 1536px;
+    @include padding(2rem);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    max-width: 1920px;
+    @include padding(2rem);
+  }
+
+}
+
+.containerFluid {
+     max-width: 100vw;
+    @media only screen and (min-width: 640px) {
+        @include padding;
+    }
+
+    @media only screen and (min-width: 768px) {
+        @include padding(1.5rem);
+    }
+
+    @media only screen and (min-width: 1024px) {
+        @include padding(1.5rem);
+    }
+
+    @media only screen and (min-width: 1140px) {
+        @include padding(2rem);
+    }
+
+    @media only screen and (min-width: 1536px) {
+        @include padding(2rem);
+    }
+}
