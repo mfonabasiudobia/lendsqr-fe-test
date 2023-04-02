@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Box, Form, Button, TextLink, Text, Image } from "@/Views/Atoms";
 import { TextInput } from "@/Views/Molecules";
 import { routes } from "@config";
@@ -7,8 +6,6 @@ import AuthTemplate from "@/Views/Templates/AuthTemplate";
 import style from "./Styles/HomeStyle.module.scss";
 
 const Home: React.FC = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
   return (
     <AuthTemplate>
       <Box className={`${style["login-wrapper"]}`}>
@@ -39,23 +36,12 @@ const Home: React.FC = () => {
           <Form spacingY={4}>
             <TextInput size="md" className="text-sm" placeholder="Email" />
 
-            <Box className="relative">
-              <TextInput
-                size="md"
-                className="text-sm"
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-              />
-              <Button
-                variant="text"
-                size="xs"
-                color="accent"
-                weight="medium"
-                onClick={() => setShowPassword((prev) => !prev)}
-                text={`${showPassword ? "HIDE" : "SHOW"}`}
-                className="absolute right-1 top-2"
-              />
-            </Box>
+            <TextInput
+              size="md"
+              className="text-sm"
+              type="password"
+              placeholder="Password"
+            />
 
             <Box>
               <TextLink

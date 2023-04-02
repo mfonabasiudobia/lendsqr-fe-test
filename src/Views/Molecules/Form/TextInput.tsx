@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useAtomicStyle from "@/Views/Hooks/useAtomicStyle";
 import { TextInputModel } from "./Models/TextInputModel";
 
@@ -14,6 +15,8 @@ const Button: React.FC<TextInputModel> = ({
   error,
   required = false,
 }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
   const styles = {
     importedStyles: useAtomicStyle({ className }),
     formControl: `w-full px-3 rounded border-2 border-gray-100 text-dark  transition tracking-wider text-sm bg-white`,
@@ -35,15 +38,26 @@ const Button: React.FC<TextInputModel> = ({
   return (
     <div>
       {label && <label>{label}</label>}
-      <input
-        type={type}
-        placeholder={placeholder}
-        disabled={disabled}
-        value={defaultValue}
-        className={`${Object.values(styles).join(" ")}`}
-        autoComplete="off"
-        id={id}
-      />
+      <div className="relative">
+        <input
+          type={showPassword ? "text" : type}
+          placeholder={placeholder}
+          disabled={disabled}
+          value={defaultValue}
+          className={`${Object.values(styles).join(" ")}`}
+          autoComplete="off"
+          id={id}
+        />
+        {type == "password" ? (
+          <button
+            type="button"
+            onClick={() => setShowPassword((prev) => !prev)}
+            className="text-accent font-medium text-xs absolute right-3 top-4"
+          >
+            {showPassword ? "HIDE" : "SHOW"}
+          </button>
+        ) : null}
+      </div>
       {helperText && (
         <span className={`text-sm font-light ${error ? "text-danger" : ""}`}>
           {helperText}
