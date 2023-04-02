@@ -4,7 +4,11 @@ import Logo from "@images/logo.png";
 
 const AuthTemplate: React.FC<AuthTemplateModel> = ({ children }) => {
   return (
-    <Container variant="fixed" className="page-wrapper py-20" spacingY={16}>
+    <Container
+      variant="fixed"
+      className="page-wrapper py-20 avenir-font"
+      spacingY={16}
+    >
       <Box>
         <Image src={Logo} alt="Logo" variant="square" fill={false} />
       </Box>

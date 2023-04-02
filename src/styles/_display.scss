@@ -87,3 +87,29 @@ $position-list : absolute, relative, fixed, static;
     z-index : $name;
   }
 }
+
+@each $name, $size in $spacing {
+  .right-#{$name} {
+    right: $size;
+  }
+}
+
+@each $name, $size in $spacing {
+  .top-#{$name} {
+    top: $size;
+  }
+}
+
+@each $name, $size in $spacing {
+  .left-#{$name} {
+    left: $size;
+  }
+}
+
+@each $name, $size in $spacing {
+  .bottom-#{$name} {
+    bottom: $size;
+  }
+}
+
+
