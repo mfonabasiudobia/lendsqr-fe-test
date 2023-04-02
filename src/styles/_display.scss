@@ -1,0 +1,89 @@
+$objectFit-list : contain, cover, fill, none, scale-down;
+$zIndex-list : 0, 10, 20, 30, 40, 50, auto;
+$display-list : inline, inline-block, block;
+$position-list : absolute, relative, fixed, static;
+
+
+/* Overflow - Auto */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* Overflow - Hidden */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Overflow - Visible */
+.overflow-visible {
+  overflow: visible;
+}
+
+/* Overflow - Scroll */
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* Overflow - X-Axis - Auto */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+/* Overflow - X-Axis - Hidden */
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+/* Overflow - X-Axis - Visible */
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+/* Overflow - X-Axis - Scroll */
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+/* Overflow - Y-Axis - Auto */
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+/* Overflow - Y-Axis - Hidden */
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+/* Overflow - Y-Axis - Visible */
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+/* Overflow - Y-Axis - Scroll */
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+@each $name in $position-list {
+  .#{$name} {
+    position : $name;
+  }
+}
+
+@each $name in $display-list {
+  .#{$name} {
+    display : $name;
+  }
+}
+
+@each $name in $objectFit-list {
+  .object-fit-#{$name} {
+    object-fit : $name;
+  }
+}
+
+@each $name in $zIndex-list {
+  .z-#{$name} {
+    z-index : $name;
+  }
+}

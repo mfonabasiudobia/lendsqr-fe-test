@@ -1,0 +1,232 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: inline-flex;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+}
+
+@mixin flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin flex-col {
+  flex-direction: column;
+}
+
+@mixin flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+@mixin flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+@mixin items-start {
+  align-items: flex-start;
+}
+
+@mixin items-end {
+  align-items: flex-end;
+}
+
+@mixin items-center {
+  align-items: center;
+}
+
+@mixin items-baseline {
+  align-items: baseline;
+}
+
+@mixin items-stretch {
+  align-items: stretch;
+}
+
+@mixin self-auto {
+  align-self: auto;
+}
+
+@mixin self-start {
+  align-self: flex-start;
+}
+
+@mixin self-end {
+  align-self: flex-end;
+}
+
+@mixin self-center {
+  align-self: center;
+}
+
+@mixin self-baseline {
+  align-self: baseline;
+}
+
+@mixin self-stretch {
+  align-self: stretch;
+}
+
+@mixin justify-start {
+  justify-content: flex-start;
+}
+
+@mixin justify-end {
+  justify-content: flex-end;
+}
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+@mixin justify-between {
+  justify-content: space-between;
+}
+
+@mixin justify-around {
+  justify-content: space-around;
+}
+
+@mixin flex-1 {
+  flex: 1;
+}
+
+@mixin flex-auto {
+  flex: auto;
+}
+
+@mixin flex-initial {
+  flex: initial;
+}
+
+@mixin flex-none {
+  flex: none;
+}
+
+.flex {
+  @include flex;
+}
+
+.inline-flex {
+  @include inline-flex;
+}
+
+.flex-row {
+  @include flex-row;
+}
+
+.flex-row-reverse {
+  @include flex-row-reverse;
+}
+
+.flex-col {
+  @include flex-col;
+}
+
+.flex-col-reverse {
+  @include flex-col-reverse;
+}
+
+.flex-wrap {
+  @include flex-wrap;
+}
+
+.flex-wrap-reverse {
+  @include flex-wrap-reverse;
+}
+
+.flex-no-wrap {
+  @include flex-no-wrap;
+}
+
+.items-start {
+  @include items-start;
+}
+
+.items-end {
+  @include items-end;
+}
+
+.items-center {
+  @include items-center;
+}
+
+.items-baseline {
+  @include items-baseline;
+}
+
+.items-stretch {
+  @include items-stretch;
+}
+
+.self-auto {
+  @include self-auto;
+}
+
+.self-start {
+  @include self-start;
+}
+
+.self-end {
+  @include self-end;
+}
+
+.self-center {
+  @include self-center;
+}
+
+.self-baseline {
+  @include self-baseline;
+}
+
+.self-stretch {
+  @include self-stretch;
+}
+
+.justify-start {
+  @include justify-start;
+}
+
+.justify-end {
+  @include justify-end;
+}
+
+.justify-center {
+  @include justify-center;
+}
+
+.justify-between {
+  @include justify-between;
+}
+
+.justify-around {
+  @include justify-around;
+}
+
+.flex-1 {
+  @include flex-1;
+}
+
+.flex-auto {
+  @include flex-auto;
+}
+
+.flex-initial {
+  @include flex-initial;
+}
+
+.flex-none {
+  @include flex-none;
+}
+

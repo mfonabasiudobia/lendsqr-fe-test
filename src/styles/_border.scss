@@ -1,0 +1,51 @@
+@mixin border($width, $style: solid, $color: currentColor) {
+  border: $width $style $color;
+}
+
+.border {
+  @include border(1px);
+}
+
+.border-t {
+  @include border(top, 1px);
+}
+
+.border-r {
+  @include border(right, 1px);
+}
+
+.border-b {
+  @include border(bottom, 1px);
+}
+
+.border-l {
+  @include border(left, 1px);
+}
+
+.border-2 {
+  @include border(2px);
+}
+
+.border-4 {
+  @include border(4px);
+}
+
+.border-8 {
+  @include border(8px);
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-none {
+  border: none;
+}
