@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$screen-sm : 650px;
+$screen-md : 768px;
+$screen-lg : 1024px;
+$screen-xl : 1140px;
+$screen-2xl : 1536px;
+$screen-3xl : 1920px;
+
 @import "./text-style";
 @import "./spacing";
 @import "./shadow";
@@ -6,24 +15,18 @@
 @import "./flexbox";
 @import "./grid";
 @import "./display";
+@import "./width";
+@import "./height";
+@import "./form";
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  list-style: none;
+.page-wrapper {
+  min-height: 100vh;
 }
 
-a {
-  text-decoration: none;
-}
 
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
+@each $name, $value in $colors {
+  .border-#{$name} {
+    border-color: $value;
+  }
 }
 

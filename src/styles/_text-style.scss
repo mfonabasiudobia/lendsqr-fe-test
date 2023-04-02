@@ -29,7 +29,7 @@ $fontSizes : (
 
 //All Colours used on the project for better control 
 $colors : (
-  primary: #1e83ff,
+  primary: #213F7D,
   dark: #121212,
   lightgrey: '#9CA3AF',
   light: #f3f3f3,
@@ -38,10 +38,12 @@ $colors : (
   secondary: #808183,
   danger: #CF0202,
   success: #00FF00,
+  accent : #39CDCC,
   bordergray: #C9C8D3,
   darkgrey: #555555,
   lightblue: #E9ECF9,
   lighterblue : #EBEDFA,
+  gray-100: rgba(84, 95, 125, 0.15),
 );
 
 $text-alignment-list : left, right, center, justify, start, end;
@@ -64,11 +66,6 @@ $text-alignment-list : left, right, center, justify, start, end;
   }
 }
 
-@each $name, $value in $colors {
-  .border-#{$name} {
-    border-color: $value;
-  }
-}
 
 @each $name, $size in $colors {
   .bg-#{$name} {
@@ -82,3 +79,21 @@ $text-alignment-list : left, right, center, justify, start, end;
   }
 }
 
+
+.title {
+  font-size: 40px;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 32px;
+  }
+
+}
+
+.subtitle {
+  font-size: 24px;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 18px;
+  }
+
+}

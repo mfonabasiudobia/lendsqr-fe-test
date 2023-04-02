@@ -1,0 +1,33 @@
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  overflow-wrap: normal;
+  word-break: normal;
+  word-wrap: break-word;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

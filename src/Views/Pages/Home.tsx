@@ -1,20 +1,79 @@
-import { Button, Container } from "@/Views/Atoms";
+import {
+  Box,
+  Form,
+  Button,
+  Container,
+  TextLink,
+  Text,
+  Image,
+} from "@/Views/Atoms";
+import { TextInput } from "@/Views/Molecules";
+import { routes } from "@config";
+import PabloSignIn from "@svg/pablo-sign-in.svg";
+import AuthTemplate from "@/Views/Templates/AuthTemplate";
+import style from "./Styles/HomeStyle.module.scss";
 
 const Home: React.FC = () => {
   return (
-    <div className="overflow-hidden">
-      <div>djdjdj</div>
+    <AuthTemplate>
+      <Box className={`${style["login-wrapper"]}`}>
+        <Box className="relative">
+          <Image
+            src={PabloSignIn}
+            alt="Sign In Image"
+            variant="square"
+            fill={true}
+          />
+        </Box>
+        <Box spacingY={6}>
+          <Box>
+            <Text
+              variant="h2"
+              text="Welcome!"
+              color="primary"
+              className="title"
+              weight="extrabold"
+            />
+            <Text
+              variant="p"
+              text="Enter details to login."
+              className="subtitle"
+              color="secondary"
+            />
+          </Box>
+          <Form spacingY={2}>
+            <TextInput size="md" className="text-sm" placeholder="Email" />
 
-      <div className="text-right">jjsjj</div>
+            <TextInput
+              size="md"
+              className="text-sm"
+              type="password"
+              placeholder="Password"
+            />
 
-      {/* <Button variant="contained" text="hello" color="primary" />
+            <Box>
+              <TextLink
+                href={routes.forgot_password}
+                size="xs"
+                color="accent"
+                text="Forgot your password?"
+              />
+            </Box>
 
-      <Button variant="contained" text="hello" color="primary" /> */}
-
-      <Container variant="fixed" className="bg-primary">
-        djdjdj
-      </Container>
-    </div>
+            <Button
+              type="submit"
+              variant="contained"
+              fullWidth
+              size="sm"
+              padding="py-3"
+              text="LOG IN"
+              color="white"
+              className="bg-accent"
+            />
+          </Form>
+        </Box>
+      </Box>
+    </AuthTemplate>
   );
 };
 

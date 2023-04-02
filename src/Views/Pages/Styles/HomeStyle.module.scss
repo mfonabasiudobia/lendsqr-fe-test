@@ -1,0 +1,19 @@
+@import "../../../styles/globals";
+
+
+.login-wrapper {
+    @extend .grid;
+    @extend .grid-cols-2;
+    @extend .gap-24;
+
+   @media only screen and (max-width: $screen-md) {
+     @include grid-cols-1;
+   }
+
+   & > div:nth-child(1) {
+     @media only screen and (max-width: $screen-md) {
+          display: none;
+     }
+   }
+
+}

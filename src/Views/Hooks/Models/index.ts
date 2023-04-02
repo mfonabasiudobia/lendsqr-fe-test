@@ -9,5 +9,5 @@ export interface StyleModel {
   spacing?: number;
   className?: string;
   elevation?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
-  color?: "primary" | "dark" | "light" | "secondary" | "danger" | "success" | "white";
+  color?: "primary" | "dark" | "light" | "secondary" | "danger" | "success" | "white" | "accent";
 }

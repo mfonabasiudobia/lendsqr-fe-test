@@ -3,6 +3,8 @@ import useAtomicStyle from "@/Views/Hooks/useAtomicStyle";
 
 const Button: React.FC<ButtonModel> = ({
   variant,
+  type = "button",
+  fullWidth = false,
   className,
   elevation,
   size,
@@ -23,16 +25,6 @@ const Button: React.FC<ButtonModel> = ({
   const getBorderColor = () => (color ? `border-${color}` : null);
 
   const styles = {
-    variantClass: `text-center inline-block rounded px-5 py-2
-    ${
-      variant === "text"
-        ? ""
-        : variant === "contained"
-        ? `${getBackgroundColor()} text-white hover:bg-opacity-90`
-        : variant === "outlined"
-        ? `border ${getBorderColor()} hover:bg-opacity-90`
-        : null
-    }`,
     importedStyles: useAtomicStyle({
       size,
       color,
@@ -46,10 +38,25 @@ const Button: React.FC<ButtonModel> = ({
       spacingY,
       spacing,
     }),
+    variantClass: `text-center inline-block rounded px-5 py-2
+    ${
+      variant === "text"
+        ? ""
+        : variant === "contained"
+        ? `${getBackgroundColor()} text-white hover:bg-opacity-90`
+        : variant === "outlined"
+        ? `border ${getBorderColor()} hover:bg-opacity-90`
+        : null
+    }`,
+    fullWidthStyle: fullWidth ? "w-full" : null,
   };
 
   return (
-    <button className={`${Object.values(styles).join(" ")}`} onClick={onClick}>
+    <button
+      type={type}
+      className={`${Object.values(styles).join(" ")}`}
+      onClick={onClick}
+    >
       {text ? text : children}
     </button>
   );
