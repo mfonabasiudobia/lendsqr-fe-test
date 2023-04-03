@@ -5,7 +5,7 @@ import UserCircleIcon from "@svg/user-circle.svg";
 import UserCircleOutlineIcon from "@svg/user-outline-circle.svg";
 import CoinCircleIcon from "@svg/coin-circle.svg";
 import DoubleCoinCircleIcon from "@svg/double-coin-circle.png";
-import styles from "./Styles/index.module.scss";
+import styles from "@/styles/global.module.scss";
 
 const Home: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <Text
           variant="h1"
           text="Users"
-          className="title"
+          className="dashboard-title"
           color="primary"
           weight="medium"
         />

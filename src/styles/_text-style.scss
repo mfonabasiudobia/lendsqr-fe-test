@@ -32,7 +32,7 @@ $colors : (
   primary: #213F7D,
   dark: #121212,
   lightgrey: '#9CA3AF',
-  light: #f3f3f3,
+  light: #fefefe,
   white : #fff,
   lightsecondary : '#FBFBFE',
   secondary: #808183,
@@ -78,25 +78,6 @@ $text-alignment-list : left, right, center, justify, start, end;
   .text-#{$name} {
     text-align: $name;
   }
-}
-
-
-.title {
-  font-size: 40px;
-
-  @media only screen and (max-width: 640px) {
-    font-size: 32px;
-  }
-
-}
-
-.subtitle {
-  font-size: 22px;
-
-  @media only screen and (max-width: 640px) {
-    font-size: 18px;
-  }
-
 }
 
 @each $name, $value in $colors {

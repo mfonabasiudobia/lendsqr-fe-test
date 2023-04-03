@@ -8,3 +8,52 @@
 
 }
 
+.user-stats-wrapper {
+    @extend .grid;
+    @extend .grid-cols-4;
+    @extend .gap-7;
+
+   @media only screen and (max-width: $screen-lg) {
+     @include grid-cols-3;
+   }
+
+   @media only screen and (max-width: $screen-md) {
+     @include grid-cols-2;
+   }
+
+    @media only screen and (max-width: $screen-sm) {
+     @include grid-cols-2;
+   }
+
+}
+
+
+
+.user-details-information-wrapper {
+
+   @media only screen and (max-width: $screen-lg) {
+     @include grid-cols-3;
+   }
+
+   @media only screen and (max-width: $screen-md) {
+     @include grid-cols-2;
+   }
+
+    @media only screen and (max-width: $screen-sm) {
+     @include grid-cols-2;
+   }
+
+}
+
+.user-details-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $screen-md) {
+      display: block;
+      & > * + * {
+        margin-top: 10px; 
+     }
+   }
+}

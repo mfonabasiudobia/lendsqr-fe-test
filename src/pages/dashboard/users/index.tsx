@@ -1,4 +1,4 @@
-import Users from "@/Views/Pages/Dashboard/Users";
+import Users from "@/Views/Pages/Dashboard/Users/Users";
 
 const UsersPage = () => {
   return <Users />;

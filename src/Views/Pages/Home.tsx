@@ -34,11 +34,15 @@ const Home: React.FC = () => {
             />
           </Box>
           <Form spacingY={4}>
-            <TextInput size="md" className="text-sm" placeholder="Email" />
+            <TextInput
+              size="md"
+              className="text-sm w-full"
+              placeholder="Email"
+            />
 
             <TextInput
               size="md"
-              className="text-sm"
+              className="text-sm w-full"
               type="password"
               placeholder="Password"
             />

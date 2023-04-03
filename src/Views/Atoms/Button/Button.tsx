@@ -38,14 +38,14 @@ const Button: React.FC<ButtonModel> = ({
       spacingY,
       spacing,
     }),
-    variantClass: `text-center inline-block rounded px-5 py-2
+    variantClass: `text-center inline-block px-5 py-2
     ${
       variant === "text"
         ? ""
         : variant === "contained"
         ? `${getBackgroundColor()} text-white hover:bg-opacity-90`
         : variant === "outlined"
-        ? `border ${getBorderColor()} hover:bg-opacity-90`
+        ? `border-1 rounded-1 ${getBorderColor()} hover:bg-opacity-90`
         : null
     }`,
     fullWidthStyle: fullWidth ? "w-full" : null,

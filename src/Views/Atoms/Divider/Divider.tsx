@@ -1,5 +1,7 @@
 const Divider: React.FC = () => {
-  return <hr className="w-full border border-light" />;
+  return (
+    <hr style={{ backgroundColor: "#eee", border: "none", height: "1px" }} />
+  );
 };
 
 export default Divider;
