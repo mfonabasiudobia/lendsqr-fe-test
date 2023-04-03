@@ -64,18 +64,18 @@ $widths: (
 
 @each $key, $value in $widths {
   .w-#{$key} {
-    width: $value;
+    width: $value !important;
   }
 }
 
 @each $key, $value in $widths {
   .min-w-#{$key} {
-    min-width: $value;
+    min-width: $value !important;
   }
 }
 
 @each $key, $value in $widths {
   .max-w-#{$key} {
-    max-width: $value;
+    max-width: $value !important;
   }
 }

@@ -19,7 +19,7 @@ const Button: React.FC<TextInputModel> = ({
 
   const styles = {
     importedStyles: useAtomicStyle({ className }),
-    formControl: `w-full px-3 rounded border-2 border-gray-100 text-dark  transition tracking-wider text-sm bg-white`,
+    formControl: `px-3 rounded border-2 border-gray-100 text-dark  text-sm bg-white`,
     formResponsivenessClass: `${
       size === "sm"
         ? "py-2"

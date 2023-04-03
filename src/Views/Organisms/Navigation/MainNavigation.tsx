@@ -7,9 +7,10 @@ import {
   Text,
   Image,
 } from "@/Views/Atoms";
-import { List, ListItem } from "@/Views/Molecules";
+import { List, ListItem, Search } from "@/Views/Molecules";
 import Logo from "@images/logo.png";
 import Profile1 from "@images/profile/profile1.png";
+import styles from "@/styles/global.module.scss";
 
 const MainNavigation: React.FC = () => {
   return (
@@ -19,9 +20,16 @@ const MainNavigation: React.FC = () => {
       elevation="sm"
       className="flex items-center justify-between sticky top-0 bg-white z-10"
     >
-      <Image src={Logo} alt="Logo" variant="square" fill={false} height={30} />
-
-      <Box>Search Box</Box>
+      <TextLink href="/">
+        <Image
+          src={Logo}
+          alt="Logo"
+          variant="square"
+          fill={false}
+          height={25}
+        />
+      </TextLink>
+      <Search />
 
       <Box>
         <List alignment="horizontal" spacingX={5}>
@@ -56,8 +64,13 @@ const MainNavigation: React.FC = () => {
                       fill={false}
                       height={40}
                     />
-                    <Text variant="span" text="MfonAbasi" weight="medium" />
-                    <IconButton size="xl" name="AiFillCaretDown" type="ai" />
+                    <Text
+                      variant="span"
+                      text="MfonAbasi"
+                      weight="medium"
+                      className={styles["hide-from-mobile"]}
+                    />
+                    <IconButton size="sm" name="AiFillCaretDown" type="ai" />
                   </Box>
                 }
                 className="left-2 top-10 bg-white shadow-xl text-sm rounded inline-block py-2"

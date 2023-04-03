@@ -1,0 +1,10 @@
+@import "./globals.scss";
+
+.hide-from-mobile {
+
+    @media only screen and (max-width: $screen-lg) {
+     display: none;
+   }
+
+}
+

@@ -11,7 +11,7 @@ $borderStyles : solid, dotted, dashed;
 
 @each $borderStyle in $borderStyles {
   .border-#{$borderStyle} {
-     border-style: $borderStyle;
+     border-style: $borderStyle !important;
   }
 }
 
@@ -19,52 +19,60 @@ $borderStyles : solid, dotted, dashed;
 //Generate Border Style
 @each $name, $size in $borderSizes {
     .border-#{$name} {
-      border-width: $size;
-      border-style: solid;
+      border-width: $size !important;
+      border-style: solid !important;
     }
 }
 
 //Generate Border Left Style
 @each $name, $size in $borderSizes {
     .border-l-#{$name} {
-      border-width: $size;
-      border-left-style: solid;
+      border-left-width: $size !important;
+      border-left-style: solid !important;
     }
 }
 
 //Generate Border Right Style
 @each $name, $size in $borderSizes {
     .border-r-#{$name} {
-      border-width: $size;
-      border-right-style: solid;
+      border-right-width: $size !important;
+      border-right-style: solid !important;
     }
 }
 
 //Generate Border Bottom Style
 @each $name, $size in $borderSizes {
     .border-b-#{$name} {
-      border-width: $size;
-      border-bottom-style: solid;
+      border-bottom-width: $size !important;
+      border-bottom-style: solid !important;
+    }
+}
+
+//Generate Border Top Style
+@each $name, $size in $borderSizes {
+    .border-t-#{$name} {
+      border-top-width: $size !important;
+      border-top-style: solid !important;
     }
 }
 
 @each $name, $value in $colors {
   .border-#{$name} {
-      border-color: $value;
+      border-color: $value !important;
   }
 }
 
 @each $name, $value in $colors {
   .border-l-#{$name} {
-      border-left-color: $value;
+      border-left-color: $value !important;
   }
 }
 
 @each $name, $size in $borderSizes {
   .hover\:border-l-#{$name} {
     &:hover {
-      border-left-width: $size;
-      border-left-style: solid;
+      border-left-width: $size !important;
+      border-left-style: solid !important;
     }
   }
 }
@@ -72,25 +80,25 @@ $borderStyles : solid, dotted, dashed;
 @each $name, $value in $colors {
   .hover\:border-l-#{$name} {
     &:hover {
-      border-left-color: $value;
+      border-left-color: $value !important;
     }
   }
 }
 
 @each $name, $value in $colors {
   .border-r-#{$name} {
-      border-right-color: $value;
+      border-right-color: $value !important;
   }
 }
 
 @each $name, $value in $colors {
   .border-b-#{$name} {
-      border-bottom-color: $value;
+      border-bottom-color: $value !important;
   }
 }
 
 @each $name, $value in $colors {
   .border-t-#{$name} {
-      border-top-color: $value;
+      border-top-color: $value !important;
   }
 }

@@ -19,16 +19,16 @@ const IconButton: React.FC<IconButtonModel> = ({
 
   const getBorderColor = () => (color ? `border-${color}` : null);
 
+  // ${
+  // variant === "contained"
+  //   ? `${getBackgroundColor()} text-white`
+  //   : variant === "outlined"
+  //   ? `border ${getBorderColor()} `
+  //   : ""
+  // }
+
   const styles = {
-    variantClass: `${
-      !size ? "text-3xl" : null
-    } cursor-pointer rounded-full inline-block  ${
-      variant === "contained"
-        ? `${getBackgroundColor()} text-white`
-        : variant === "outlined"
-        ? `border ${getBorderColor()} `
-        : ""
-    }`,
+    variantClass: `${!size ? "text-3xl" : null} cursor-pointer inline-block`,
     importedStyles: useAtomicStyle({
       size,
       color,
@@ -63,8 +63,8 @@ const IconButton: React.FC<IconButtonModel> = ({
   const Myicon = getIconType();
 
   return (
-    <button onClick={onClick}>
-      <Myicon className={`${Object.values(styles).join(" ")}`} />
+    <button onClick={onClick} className={`${Object.values(styles).join(" ")}`}>
+      <Myicon />
     </button>
   );
 };
