@@ -1,10 +1,11 @@
-import { Box, Text, Button, Divider } from "@/Views/Atoms";
+import { Box, Text, Button, Divider, Rating } from "@/Views/Atoms";
 import DashboardTemplate from "@/Views/Templates/DashboardTemplate";
 import styles from "@/styles/global.module.scss";
 
 const Home: React.FC = () => {
   return (
     <DashboardTemplate>
+      <Rating />
       <Box spacingY={5}>
         <Box className={styles["user-details-top-wrapper"]}>
           <Text

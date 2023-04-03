@@ -6,3 +6,4 @@ export * from "./Form";
 export * from "./Dropdown";
 export * from "./Divider";
 export * from "./Drawer";
+export * from "./Rating";
