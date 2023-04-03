@@ -20,7 +20,9 @@ const IconButton: React.FC<IconButtonModel> = ({
   const getBorderColor = () => (color ? `border-${color}` : null);
 
   const styles = {
-    variantClass: `text-3xl cursor-pointer rounded-full inline-block p-1 ${
+    variantClass: `${
+      !size ? "text-3xl" : null
+    } cursor-pointer rounded-full inline-block p-1 ${
       variant === "contained"
         ? `${getBackgroundColor()} text-white`
         : variant === "outlined"

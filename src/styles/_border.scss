@@ -1,51 +1,79 @@
-@mixin border($width, $style: solid, $color: currentColor) {
-  border: $width $style $color;
+$borderSizes : (
+  0: 0px,
+  1: 1px,
+  2: 2px,
+  4: 4px,
+  8: 8px
+);
+
+$borderStyles : solid, dotted, dashed;
+
+
+@each $borderStyle in $borderStyles {
+  .border-#{$borderStyle} {
+     border-style: $borderStyle;
+  }
 }
 
-.border {
-  @include border(1px);
+
+//Generate Border Style
+@each $name, $size in $borderSizes {
+    .border-#{$name} {
+      border-width: $size;
+      border-style: solid;
+    }
 }
 
-.border-t {
-  @include border(top, 1px);
+//Generate Border Left Style
+@each $name, $size in $borderSizes {
+    .border-l-#{$name} {
+      border-width: $size;
+      border-left-style: solid;
+    }
 }
 
-.border-r {
-  @include border(right, 1px);
+//Generate Border Right Style
+@each $name, $size in $borderSizes {
+    .border-r-#{$name} {
+      border-width: $size;
+      border-right-style: solid;
+    }
 }
 
-.border-b {
-  @include border(bottom, 1px);
+//Generate Border Bottom Style
+@each $name, $size in $borderSizes {
+    .border-b-#{$name} {
+      border-width: $size;
+      border-bottom-style: solid;
+    }
 }
 
-.border-l {
-  @include border(left, 1px);
+@each $name, $value in $colors {
+  .border-#{$name} {
+      border-color: $value;
+  }
 }
 
-.border-2 {
-  @include border(2px);
+@each $name, $value in $colors {
+  .border-l-#{$name} {
+      border-left-color: $value;
+  }
 }
 
-.border-4 {
-  @include border(4px);
+@each $name, $value in $colors {
+  .border-r-#{$name} {
+      border-right-color: $value;
+  }
 }
 
-.border-8 {
-  @include border(8px);
+@each $name, $value in $colors {
+  .border-b-#{$name} {
+      border-bottom-color: $value;
+  }
 }
 
-.border-solid {
-  border-style: solid;
-}
-
-.border-dashed {
-  border-style: dashed;
-}
-
-.border-dotted {
-  border-style: dotted;
-}
-
-.border-none {
-  border: none;
+@each $name, $value in $colors {
+  .border-t-#{$name} {
+      border-top-color: $value;
+  }
 }

@@ -1,12 +1,13 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
+  color: #121212;
 }
 
 * {
   margin: 0;
   padding: 0;
-  border: 0;
+  /* border: 0; */
   font: inherit;
   vertical-align: baseline;
   overflow-wrap: normal;
@@ -37,5 +38,9 @@ input:focus, textarea:focus {
 button {
   border: none;
   background: none;
+  cursor: pointer;
+}
+
+.cursor-pointer {
   cursor: pointer;
 }

@@ -2,7 +2,7 @@ import { TextModel } from "./Models/Text";
 import useAtomicStyle from "@/Views/Hooks/useAtomicStyle";
 
 const Text: React.FC<TextModel> = ({
-  variant,
+  variant = "span",
   className,
   elevation,
   size,

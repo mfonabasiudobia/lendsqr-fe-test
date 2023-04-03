@@ -1,8 +1,8 @@
-import { Fragment } from "react";
-import { ListItemModel } from "./Models/ListItemModel";
+import { ListLinkItemModel } from "./Models/ListLinkItemModel";
 import useAtomicStyle from "@/Views/Hooks/useAtomicStyle";
+import Link from "next/link";
 
-const ListItem: React.FC<ListItemModel> = ({
+const ListLinkItem: React.FC<ListLinkItemModel> = ({
   className,
   elevation,
   size,
@@ -16,6 +16,7 @@ const ListItem: React.FC<ListItemModel> = ({
   spacing,
   LeftItem,
   Item,
+  href,
   RightItem,
 }) => {
   const styles = {
@@ -23,7 +24,7 @@ const ListItem: React.FC<ListItemModel> = ({
       size,
       color,
       margin,
-      padding,
+      // padding,
       className,
       elevation,
       align,
@@ -35,12 +36,14 @@ const ListItem: React.FC<ListItemModel> = ({
   };
 
   return (
-    <li className={`${Object.values(styles).join(" ")} flex items-center`}>
-      {LeftItem && LeftItem}
-      {Item && Item}
-      {RightItem && RightItem}
-    </li>
+    <Link href={href} legacyBehavior>
+      <a className={`${Object.values(styles).join(" ")} flex items-center`}>
+        {LeftItem && LeftItem}
+        {Item && Item}
+        {RightItem && RightItem}
+      </a>
+    </Link>
   );
 };
 
-export default ListItem;
+export default ListLinkItem;

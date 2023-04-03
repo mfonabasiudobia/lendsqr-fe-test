@@ -23,7 +23,7 @@ const useAtomicStyle = ({
 
   const getSpacingY = () => (spacingY ? `space-y-${spacingY}` : null);
 
-  const getSpacingX = () => (spacingX ? `space-y-${spacingX}` : null);
+  const getSpacingX = () => (spacingX ? `space-x-${spacingX}` : null);
 
   const getSpacing = () => (spacing ? `space-${spacing}` : null);
 

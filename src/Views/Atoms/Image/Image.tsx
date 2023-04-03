@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Avatar: React.FC<ImageModel> = ({
   className,
-  variant,
+  variant = "square",
   elevation,
   margin,
   padding,
@@ -37,7 +37,7 @@ const Avatar: React.FC<ImageModel> = ({
       priority={true}
       height={height}
       fill={fill}
-      className={`${Object.values(styles).join(" ")}`}
+      className={`inline-block ${Object.values(styles).join(" ")}`}
     />
   );
 };

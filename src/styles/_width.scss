@@ -67,3 +67,15 @@ $widths: (
     width: $value;
   }
 }
+
+@each $key, $value in $widths {
+  .min-w-#{$key} {
+    min-width: $value;
+  }
+}
+
+@each $key, $value in $widths {
+  .max-w-#{$key} {
+    max-width: $value;
+  }
+}

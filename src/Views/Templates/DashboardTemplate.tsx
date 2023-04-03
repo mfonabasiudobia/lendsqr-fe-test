@@ -1,9 +1,17 @@
 import { Box } from "@/Views/Atoms";
 import { AuthTemplateModel } from "./Models/AuthTemplateModel";
-// import Logo from "@images/logo.png";
+import { MainNavigation, Sidebar } from "@/Views/Organisms";
 
-const AuthTemplate: React.FC<AuthTemplateModel> = ({ children }) => {
-  return <Box>{children}</Box>;
+const DashboardTemplate: React.FC<AuthTemplateModel> = ({ children }) => {
+  return (
+    <Box>
+      <MainNavigation />
+      <Box className="flex">
+        <Sidebar />
+        <Box padding="px-7 py-10">{children}</Box>
+      </Box>
+    </Box>
+  );
 };
 
-export default AuthTemplate;
+export default DashboardTemplate;

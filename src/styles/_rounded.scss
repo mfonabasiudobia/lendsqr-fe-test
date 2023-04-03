@@ -29,3 +29,7 @@
 .rounded-none {
   @include rounded(0);
 }
+
+.rounded-full {
+  @include rounded(100%);
+}

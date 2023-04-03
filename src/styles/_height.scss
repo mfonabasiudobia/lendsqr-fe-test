@@ -63,7 +63,20 @@ $heights: (
 );
 
 @each $key, $value in $heights {
-  .w-#{$key} {
+  .h-#{$key} {
     height: $value;
+  }
+}
+
+
+@each $key, $value in $widths {
+  .min-h-#{$key} {
+    max-width: $value;
+  }
+}
+
+@each $key, $value in $widths {
+  .max-h-#{$key} {
+    max-width: $value;
   }
 }

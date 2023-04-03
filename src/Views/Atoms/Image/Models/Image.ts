@@ -4,7 +4,7 @@ import { StaticImageData } from "next/image";
 
 
 export interface ImageModel extends StyleModel {
-  variant: "circle" | "square" | "rounded";
+  variant?: "circle" | "square" | "rounded";
   alt: string;
   src: string | StaticImageData;
   fill: boolean,

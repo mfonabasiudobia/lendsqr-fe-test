@@ -39,6 +39,7 @@ $colors : (
   danger: #CF0202,
   success: #00FF00,
   accent : #39CDCC,
+  accent-light: rgba(57, 205, 204, 0.06),
   bordergray: #C9C8D3,
   darkgrey: #555555,
   lightblue: #E9ECF9,
@@ -98,8 +99,22 @@ $text-alignment-list : left, right, center, justify, start, end;
 
 }
 
-.hover\:underline {
-  &:hover {
-    text-decoration: underline;
+@each $name, $value in $colors {
+  .hover\:bg-#{$name} {
+    &:hover {
+      background-color: $value;
+    }
   }
 }
+
+@each $name, $value in $colors {
+  .hover\:text-#{$name} {
+    &:hover {
+      color: $value;
+    }
+  }
+}
+
+
+
+

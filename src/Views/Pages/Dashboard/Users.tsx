@@ -1,50 +1,50 @@
-import {
-  Box,
-  Container,
-  Form,
-  Button,
-  TextLink,
-  Text,
-  Image,
-} from "@/Views/Atoms";
-import { TextInput, List, ListItem } from "@/Views/Molecules";
-import { routes } from "@config";
+import { Box, Text } from "@/Views/Atoms";
+// import { routes } from "@config";
 import DashboardTemplate from "@/Views/Templates/DashboardTemplate";
-import Logo from "@images/logo.png";
 
 const Home: React.FC = () => {
   return (
     <DashboardTemplate>
-      <Container
-        variant="fluid"
-        padding="py-5"
-        elevation="sm"
-        className="flex items-center justify-between"
-      >
-        <Image
-          src={Logo}
-          alt="Logo"
-          variant="square"
-          fill={false}
-          height={30}
+      <Box spacingY={5}>
+        <Text
+          variant="h1"
+          text="Users"
+          className="title"
+          color="primary"
+          weight="medium"
         />
-        <Box>Search Box</Box>
-        AiOutlineBell
-        <Box>
-          <List alignment="horizontal">
-            <ListItem
-              Item={
-                <TextLink
-                  text="Docs"
-                  href="/"
-                  underline="always"
-                  color="primary"
-                />
-              }
+        <Box className="grid grid-cols-4" spacingX={5}>
+          <Box elevation="lg" className="bg-white" padding="p-3" spacingY={2}>
+            <Text variant="h1" text="Users" size="sm" weight="normal" />
+            <Text variant="h3" text="2,453" size="lg" weight="semibold" />
+          </Box>
+
+          <Box elevation="lg" className="bg-white" padding="p-3" spacingY={2}>
+            <Text variant="h1" text="Active Users" size="sm" weight="normal" />
+            <Text variant="h3" text="2,453" size="lg" weight="semibold" />
+          </Box>
+
+          <Box elevation="lg" className="bg-white" padding="p-3" spacingY={2}>
+            <Text
+              variant="h1"
+              text="Users with Loans"
+              size="sm"
+              weight="normal"
             />
-          </List>
+            <Text variant="h3" text="12,453" size="lg" weight="semibold" />
+          </Box>
+
+          <Box elevation="lg" className="bg-white" padding="p-3" spacingY={2}>
+            <Text
+              variant="h1"
+              text="Users with Savings"
+              size="sm"
+              weight="normal"
+            />
+            <Text variant="h3" text="102,453" size="lg" weight="semibold" />
+          </Box>
         </Box>
-      </Container>
+      </Box>
     </DashboardTemplate>
   );
 };

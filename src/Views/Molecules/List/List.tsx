@@ -38,7 +38,7 @@ const List: React.FC<ListModel> = ({
     }),
     alignmentClass:
       alignment === "horizontal"
-        ? "flex items-center space-x-2"
+        ? "flex items-center"
         : alignment === "vertical"
         ? ""
         : null,
@@ -49,8 +49,13 @@ const List: React.FC<ListModel> = ({
       {header}
       {React.Children.map(children, (child, index) => {
         if (React.isValidElement(child)) {
+          if (childrenClassName) {
+            return React.cloneElement(child as React.ReactElement, {
+              className: childrenClassName,
+              key: index,
+            });
+          }
           return React.cloneElement(child as React.ReactElement, {
-            className: childrenClassName,
             key: index,
           });
         }
