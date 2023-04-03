@@ -15,7 +15,7 @@
    }
 
     @media only screen and (max-width: $screen-sm) {
-     @include grid-cols-1;
+     @include grid-cols-2;
    }
 
 }

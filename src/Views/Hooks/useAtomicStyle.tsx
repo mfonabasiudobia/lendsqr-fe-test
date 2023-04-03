@@ -27,9 +27,9 @@ const useAtomicStyle = ({
 
   const getSpacing = () => (spacing ? `space-${spacing}` : null);
 
-  const getMarginSize = () => (margin ? margin : "m-0");
+  const getMarginSize = () => (margin ? margin : null);
 
-  const getPaddingSize = () => (padding ? padding : "p-0");
+  const getPaddingSize = () => (padding ? padding : null);
 
   const getAlignment = () => (align ? `text-${align}` : null);
 

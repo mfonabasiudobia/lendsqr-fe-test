@@ -17,7 +17,7 @@ const MainNavigation: React.FC = () => {
       variant="fluid"
       padding="py-5"
       elevation="sm"
-      className="flex items-center justify-between"
+      className="flex items-center justify-between sticky top-0 bg-white z-10"
     >
       <Image src={Logo} alt="Logo" variant="square" fill={false} height={30} />
 

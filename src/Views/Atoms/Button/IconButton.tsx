@@ -22,7 +22,7 @@ const IconButton: React.FC<IconButtonModel> = ({
   const styles = {
     variantClass: `${
       !size ? "text-3xl" : null
-    } cursor-pointer rounded-full inline-block p-1 ${
+    } cursor-pointer rounded-full inline-block  ${
       variant === "contained"
         ? `${getBackgroundColor()} text-white`
         : variant === "outlined"

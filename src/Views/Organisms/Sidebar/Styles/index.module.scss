@@ -1,0 +1,24 @@
+@import "../../../../styles/globals";
+
+
+.responsive-sidebar-wrapper {
+   @media only screen and (max-width: $screen-md) {
+     display: none;
+   }
+
+   @media only screen and (min-width: $screen-md) {
+     width: 35%;
+   }
+
+   @media only screen and (min-width: $screen-lg) {
+     width: 25%;
+   }
+}
+
+.responsive-toggle-sidebar-btn {
+    display: none;
+
+  @media only screen and (max-width: $screen-md) {
+     display: inline-block;
+   }
+}

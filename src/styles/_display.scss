@@ -1,7 +1,7 @@
 $objectFit-list : contain, cover, fill, none, scale-down;
 $zIndex-list : 0, 10, 20, 30, 40, 50, auto;
 $display-list : inline, inline-block, block;
-$position-list : absolute, relative, fixed, static;
+$position-list : absolute, relative, fixed, static, sticky;
 
 
 /* Overflow - Auto */
@@ -88,27 +88,51 @@ $position-list : absolute, relative, fixed, static;
   }
 }
 
-@each $name, $size in $spacing {
+@each $name, $size in $widths {
   .right-#{$name} {
     right: $size;
   }
 }
 
-@each $name, $size in $spacing {
+@each $name, $size in $widths {
   .top-#{$name} {
     top: $size;
   }
 }
 
-@each $name, $size in $spacing {
+@each $name, $size in $widths {
   .left-#{$name} {
     left: $size;
   }
 }
 
-@each $name, $size in $spacing {
+@each $name, $size in $widths {
   .bottom-#{$name} {
-    bottom: $size;
+    bottom: -$size;
+  }
+}
+
+@each $name, $size in $widths {
+  .-right-#{$name} {
+    right: -$size;
+  }
+}
+
+@each $name, $size in $widths {
+  .-top-#{$name} {
+    top: -$size;
+  }
+}
+
+@each $name, $size in $widths {
+  .-left-#{$name} {
+    left: -$size;
+  }
+}
+
+@each $name, $size in $widths {
+  .-bottom-#{$name} {
+    bottom: -$size;
   }
 }
 

@@ -23,17 +23,26 @@ import BadgePercentIcon from "@svg/badge-percent.svg";
 import ClipboardListIcon from "@svg/clipboard-list.svg";
 import LogoutIcon from "@svg/sign-out.svg";
 import TireIcon from "@svg/tire.svg";
+import { SidebarModel } from "./Models/SidebarModel";
+import styles from "./Styles/index.module.scss";
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC<SidebarModel> = ({ isMobile }) => {
   const getStyle = (isActive: boolean) => {
     if (isActive)
-      return "px-7 py-2 space-x-3 bg-accent-light border-l-4 border-l-accent text-primary font-medium";
+      return "px-7 py-2 space-x-3 whitespace-nowrap  bg-accent-light border-l-4 border-l-accent text-primary font-medium";
 
-    return "px-7 py-2 space-x-3 text-secondary hover:bg-accent-light hover:border-l-4 hover:border-l-accent hover:text-primary";
+    return "px-7 py-2 space-x-3  whitespace-nowrap text-secondary hover:bg-accent-light hover:border-l-4 hover:border-l-accent hover:text-primary";
   };
 
   return (
-    <Box className="min-w-1/5" padding="py-5" elevation="md" spacingY={7}>
+    <Box
+      className={`${
+        isMobile ? "w-full" : styles["responsive-sidebar-wrapper"]
+      }`}
+      padding="py-5"
+      elevation="md"
+      spacingY={7}
+    >
       <ListLinkItem
         href="/"
         className={getStyle(false)}

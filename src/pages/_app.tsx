@@ -1,5 +1,6 @@
 import "@/styles/globals.scss";
 import "@/styles/global.css";
+import "react-modern-drawer/dist/index.css";
 
 import type { AppProps } from "next/app";
 
