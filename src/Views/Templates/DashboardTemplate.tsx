@@ -8,7 +8,7 @@ const DashboardTemplate: React.FC<AuthTemplateModel> = ({ children }) => {
       <MainNavigation />
       <Box className="flex">
         <Sidebar />
-        <Box padding="px-7 py-10">{children}</Box>
+        <Box padding="px-7 py-10 w-full">{children}</Box>
       </Box>
     </Box>
   );

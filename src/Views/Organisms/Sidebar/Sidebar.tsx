@@ -29,7 +29,7 @@ const Sidebar: React.FC = () => {
     if (isActive)
       return "px-7 py-2 space-x-3 bg-accent-light border-l-4 border-l-accent text-primary font-medium";
 
-    return "px-7 py-2 space-x-3 text-secondary hover:bg-accent-light";
+    return "px-7 py-2 space-x-3 text-secondary hover:bg-accent-light hover:border-l-4 hover:border-l-accent hover:text-primary";
   };
 
   return (

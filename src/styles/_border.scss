@@ -60,6 +60,23 @@ $borderStyles : solid, dotted, dashed;
   }
 }
 
+@each $name, $size in $borderSizes {
+  .hover\:border-l-#{$name} {
+    &:hover {
+      border-left-width: $size;
+      border-left-style: solid;
+    }
+  }
+}
+
+@each $name, $value in $colors {
+  .hover\:border-l-#{$name} {
+    &:hover {
+      border-left-color: $value;
+    }
+  }
+}
+
 @each $name, $value in $colors {
   .border-r-#{$name} {
       border-right-color: $value;
