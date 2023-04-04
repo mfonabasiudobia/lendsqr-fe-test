@@ -44,3 +44,36 @@ button {
 .cursor-pointer {
   cursor: pointer;
 }
+
+  .table-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: static;
+  }
+
+  table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+  }
+  th, td {
+    white-space: nowrap;
+    text-align: left;
+    padding: 15px 10px;
+  } 
+  
+  th {
+    font-size: 12px;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #eee;
+  }
+
+  td {
+    /* width: auto; */
+    font-size: 14px;
+    /* text-overflow: ellipsis; */
+  }
+
+

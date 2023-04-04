@@ -45,6 +45,10 @@ const IconButton: React.FC<IconButtonModel> = ({
     switch (type) {
       case "ai":
         return require("react-icons/ai")[name];
+      case "fi":
+        return require("react-icons/fi")[name];
+      case "bi":
+        return require("react-icons/fi")[name];
       case "fa":
         return require("react-icons/fa")[name];
       case "io":
