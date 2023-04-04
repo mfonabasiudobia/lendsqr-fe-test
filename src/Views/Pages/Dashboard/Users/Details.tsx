@@ -1,13 +1,13 @@
-import { Box, Text, Button, Divider, Rating, Image } from "@/Views/Atoms";
+import { Box, Text, Button, BackLink } from "@/Views/Atoms";
 import { ProfileCard, GeneralDetailsCard } from "@/Views/Organisms";
 import DashboardTemplate from "@/Views/Templates/DashboardTemplate";
 import styles from "@/styles/global.module.scss";
-import NoImage from "@images/no-image.png";
 
 const Home: React.FC = () => {
   return (
     <DashboardTemplate>
       <Box spacingY={5}>
+        <BackLink text="Back to Users" href="/dashboard/users" />
         <Box className={styles["user-details-top-wrapper"]}>
           <Text
             variant="h1"

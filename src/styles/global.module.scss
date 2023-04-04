@@ -56,6 +56,13 @@
    }
 }
 
+@mixin clearSpacing {
+  & > * + * {
+          margin-left: 0px; 
+          margin-top: 15px; 
+      }
+}
+
 .user-detail-basic-info-wrapper {
     display: flex;
     align-items: center;
@@ -63,13 +70,9 @@
     @media only screen and (max-width: $screen-md) {
       flex-direction: column;
 
-      & > * + * {
-          margin-left: 0px; 
-          margin-top: 15px; 
-      }
+      @include clearSpacing;
 
 
-      
       div {
          border-right: none !important;
          text-align: center;
@@ -79,10 +82,7 @@
          justify-content: center;
          padding: 0;
 
-         & > * + * {
-          margin-top: 10px; 
-          margin-left: 0px; 
-        }
+        @include clearSpacing;
       }
 
     }
