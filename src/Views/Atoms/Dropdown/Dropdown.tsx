@@ -21,7 +21,7 @@ const Dropdown: React.FC<DropdownModel> = ({
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    function handleClickOutside(e) {
+    function handleClickOutside(e: Event) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setIsOpen(false);
       }
