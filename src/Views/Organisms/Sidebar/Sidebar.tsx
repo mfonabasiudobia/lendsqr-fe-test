@@ -218,7 +218,6 @@ const Sidebar: React.FC<SidebarModel> = ({ isMobile }) => {
         <ListLinkItem
           href="/"
           className={getStyle(false)}
-          className="border-2 border-primary"
           LeftItem={
             <Image src={SliderIcon} alt="Preferences Icon" fill={false} />
           }
@@ -260,7 +259,6 @@ const Sidebar: React.FC<SidebarModel> = ({ isMobile }) => {
       <List childrenClassName={getStyle(false)} spacingY={3}>
         <ListLinkItem
           href="/"
-          className={getStyle(false)}
           className={getStyle(false)}
           LeftItem={<Image src={LogoutIcon} alt="Logout Icon" fill={false} />}
           Item={<Text text="Logout" />}

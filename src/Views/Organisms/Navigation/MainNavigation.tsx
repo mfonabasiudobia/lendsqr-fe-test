@@ -97,20 +97,30 @@ const MainNavigation: React.FC = () => {
                       icon_type: "ai",
                       title: "Logout",
                     },
-                  ].map((item, index) => (
-                    <ListItem
-                      spacingX={2}
-                      LeftItem={
-                        <IconButton
-                          size="xs"
-                          name={item.icon_name}
-                          type={item.icon_type}
-                          className="block"
-                        />
-                      }
-                      Item={<Text variant="h2" text={item.title} />}
-                    />
-                  ))}
+                  ].map(
+                    (
+                      item: {
+                        icon_name: string;
+                        icon_type: any;
+                        title: string;
+                      },
+                      index
+                    ) => (
+                      <ListItem
+                        key={index}
+                        spacingX={2}
+                        LeftItem={
+                          <IconButton
+                            size="xs"
+                            name={item.icon_name}
+                            type={item.icon_type}
+                            className="block"
+                          />
+                        }
+                        Item={<Text variant="h2" text={item.title} />}
+                      />
+                    )
+                  )}
                 </List>
               </Dropdown>
             }
