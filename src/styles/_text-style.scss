@@ -32,7 +32,7 @@ $colors : (
   primary: #213F7D,
   dark: #121212,
   lightgrey: '#9CA3AF',
-  light: #fefefe,
+  light: #fffbfb,
   white : #fff,
   lightsecondary : '#FBFBFE',
   secondary: #808183,
@@ -45,6 +45,7 @@ $colors : (
   lightblue: #E9ECF9,
   lighterblue : #EBEDFA,
   gray-100: rgba(84, 95, 125, 0.15),
+  gray: #eee,
 );
 
 $text-alignment-list : left, right, center, justify, start, end;

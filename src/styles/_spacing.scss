@@ -22,7 +22,7 @@ $spacing: (
   36: 9rem,
   40: 10rem
 );
-    
+
 @each $name, $size in $spacing {
   .space-y-#{$name} {
     & > * + * {

@@ -27,8 +27,6 @@
 
 }
 
-
-
 .user-details-information-wrapper {
 
    @media only screen and (max-width: $screen-lg) {
@@ -56,4 +54,36 @@
         margin-top: 10px; 
      }
    }
+}
+
+.user-detail-basic-info-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $screen-md) {
+      flex-direction: column;
+
+      & > * + * {
+          margin-left: 0px; 
+          margin-top: 15px; 
+      }
+
+
+      
+      div {
+         border-right: none !important;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 0;
+
+         & > * + * {
+          margin-top: 10px; 
+          margin-left: 0px; 
+        }
+      }
+
+    }
 }
