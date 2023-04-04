@@ -6,7 +6,12 @@ import UserCircleOutlineIcon from "@svg/user-outline-circle.svg";
 import CoinCircleIcon from "@svg/coin-circle.svg";
 import DoubleCoinCircleIcon from "@svg/double-coin-circle.png";
 import styles from "@/styles/global.module.scss";
-const Home: React.FC = () => {
+
+interface UsersModel {
+  users: [];
+}
+
+const Users: React.FC<UsersModel> = ({ users }) => {
   return (
     <DashboardTemplate>
       <Box spacingY={8}>
@@ -63,12 +68,12 @@ const Home: React.FC = () => {
           </Box>
         </Box>
 
-        <Box>
-          <UserTableList />
+        <Box className="overflow-hidden">
+          <UserTableList users={users} />
         </Box>
       </Box>
     </DashboardTemplate>
   );
 };
 
-export default Home;
+export default Users;

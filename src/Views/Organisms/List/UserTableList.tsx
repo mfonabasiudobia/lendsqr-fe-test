@@ -1,7 +1,44 @@
 import { Text, IconButton, Dropdown, Button, Box } from "@/Views/Atoms";
 import { List, ListItem } from "@/Views/Molecules";
+import Moment from "react-moment";
+import moment from "moment";
 
-const UserTableList: React.FC = () => {
+interface UserTableListModel {
+  users: [];
+}
+
+const UserTableList: React.FC<UserTableListModel> = ({ users }) => {
+  const getStatusButton = (date: string) => {
+    const currentDate = moment();
+    const dateToCheck = moment(date);
+    const threeYearsFromNow = moment().add(3, "years");
+    const threeMonthsFromNow = moment().add(3, "month");
+
+    return (
+      <Button
+        variant="text"
+        text={
+          dateToCheck.isAfter(currentDate)
+            ? "Success"
+            : dateToCheck.isBefore(threeYearsFromNow)
+            ? "Inactive"
+            : dateToCheck.isBefore(threeMonthsFromNow)
+            ? "Pending"
+            : "Blacklisted"
+        }
+        className={`rounded-10 ${
+          dateToCheck.isAfter(currentDate)
+            ? " success-btn "
+            : dateToCheck.isBefore(threeYearsFromNow)
+            ? "inactive-btn"
+            : dateToCheck.isBefore(threeMonthsFromNow)
+            ? "pending-btn"
+            : "blacklisted-btn"
+        } px-5 `}
+      />
+    );
+  };
+
   const hanleActionButton = () => {
     return (
       <Dropdown
@@ -18,15 +55,15 @@ const UserTableList: React.FC = () => {
             },
             {
               button_type: "fi",
+              button_name: "FiUserX",
+              title: "Blacklist User",
+            },
+            {
+              button_type: "fi",
               button_name: "FiUserCheck",
               title: "Activate User",
             },
-            {
-              button_type: "ai",
-              button_name: "AiOutlineEye",
-              title: "View Details",
-            },
-          ].map((item, index) => (
+          ].map((item: any, index) => (
             <ListItem
               key={index}
               spacingX={2}
@@ -67,69 +104,19 @@ const UserTableList: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Lendsqr</td>
-            <td>Adedeji</td>
-            <td>adedeji@lendsqr.com</td>
-            <td>08078903721</td>
-            <td>May 15, 2020 10:00 AM</td>
-            <td>
-              <Button
-                variant="text"
-                text="Success"
-                className="rounded-10 success-btn px-5"
-              />
-            </td>
-            <td>{hanleActionButton()}</td>
-          </tr>
-
-          <tr>
-            <td>Lendsqr</td>
-            <td>Adedeji</td>
-            <td>adedeji@lendsqr.com</td>
-            <td>08078903721</td>
-            <td>May 15, 2020 10:00 AM</td>
-            <td>
-              <Button
-                variant="text"
-                text="Inactive"
-                className="rounded-10 inactive-btn px-5"
-              />
-            </td>
-            <td>{hanleActionButton()}</td>
-          </tr>
-
-          <tr>
-            <td>Lendsqr</td>
-            <td>Adedeji</td>
-            <td>adedeji@lendsqr.com</td>
-            <td>08078903721</td>
-            <td>May 15, 2020 10:00 AM</td>
-            <td>
-              <Button
-                variant="text"
-                text="Pending"
-                className="rounded-10 pending-btn px-5"
-              />
-            </td>
-            <td>{hanleActionButton()}</td>
-          </tr>
-
-          <tr>
-            <td>Lendsqr</td>
-            <td>Adedeji</td>
-            <td>adedeji@lendsqr.com</td>
-            <td>08078903721</td>
-            <td>May 15, 2020 10:00 AM</td>
-            <td>
-              <Button
-                variant="text"
-                text="Blacklisted"
-                className="rounded-10 blacklisted-btn px-5"
-              />
-            </td>
-            <td>{hanleActionButton()}</td>
-          </tr>
+          {users.slice(0, 9).map((item: any, index) => (
+            <tr key={index}>
+              <td>{item.orgName}</td>
+              <td>{item.userName}</td>
+              <td>{item.email}</td>
+              <td>{item.phoneNumber}</td>
+              <td>
+                <Moment date={item.createdAt} format="MMM d, YYYY hh:mm A" />
+              </td>
+              <td>{getStatusButton(item.lastActiveDate)}</td>
+              <td>{hanleActionButton()}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </Box>

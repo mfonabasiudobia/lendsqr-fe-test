@@ -36,7 +36,7 @@ const DashboardTemplate: React.FC<AuthTemplateModel> = ({ children }) => {
           className={`pl-5 rounded-r-full pt-2 w-14 h-14 bg-white absolute -left-7 top-0 z-20 ${styles["responsive-toggle-sidebar-btn"]}`}
         />
 
-        <Box padding="px-7 py-10 w-full">{children}</Box>
+        <Box padding="px-7 py-10 w-full overflow-hidden">{children}</Box>
       </Box>
     </Box>
   );

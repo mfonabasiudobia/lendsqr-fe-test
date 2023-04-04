@@ -3,7 +3,11 @@ import { ProfileCard, GeneralDetailsCard } from "@/Views/Organisms";
 import DashboardTemplate from "@/Views/Templates/DashboardTemplate";
 import styles from "@/styles/global.module.scss";
 
-const Home: React.FC = () => {
+interface UserDetailsModel {
+  user: object;
+}
+
+const UserDetails: React.FC<UserDetailsModel> = ({ user }) => {
   return (
     <DashboardTemplate>
       <Box spacingY={5}>
@@ -38,7 +42,7 @@ const Home: React.FC = () => {
         </Box>
 
         <Box elevation="md" padding="px-5 pt-8" spacingY={7}>
-          <ProfileCard />
+          <ProfileCard user={user} />
           <Box className="overflow-auto flex items-center">
             {[
               "General Details",
@@ -63,11 +67,11 @@ const Home: React.FC = () => {
         </Box>
 
         <Box elevation="md" padding="px-5 py-8" spacingY={7}>
-          <GeneralDetailsCard />
+          <GeneralDetailsCard user={user} />
         </Box>
       </Box>
     </DashboardTemplate>
   );
 };
 
-export default Home;
+export default UserDetails;

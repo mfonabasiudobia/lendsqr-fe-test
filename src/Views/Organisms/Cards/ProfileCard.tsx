@@ -2,7 +2,20 @@ import { Image, Box, Rating, Text } from "@/Views/Atoms";
 import NoImage from "@images/no-image.png";
 import styles from "@/styles/global.module.scss";
 
-const ProfileCard: React.FC = () => {
+interface ProfileCardModel {
+  user: {
+    accountNumber: number | string;
+    accountBalance: number;
+    userName: string;
+    profile: {
+      avatar: string;
+    };
+  };
+}
+
+const ProfileCard: React.FC<ProfileCardModel> = ({
+  user: { accountNumber, accountBalance, userName, profile },
+}) => {
   return (
     <Box
       spacingX={5}
@@ -14,17 +27,18 @@ const ProfileCard: React.FC = () => {
         className="border-r-1 border-r-gray pr-5 flex items-center"
       >
         <Image
-          src={NoImage}
+          src={profile.avatar}
           fill={false}
+          variant="circle"
           alt="Profile Image"
           width={100}
           height={100}
         />
 
         <Box spacingY={2}>
-          <Text variant="h3" text="Grace Effiom" size="lg" weight="medium" />
+          <Text variant="h3" text={userName} size="lg" weight="medium" />
 
-          <Text variant="h6" text="LSQFf587g90" size="sm" />
+          <Text variant="h6" text={accountNumber} size="sm" />
         </Box>
       </Box>
 
@@ -35,7 +49,12 @@ const ProfileCard: React.FC = () => {
       </Box>
 
       <Box spacingY={2}>
-        <Text variant="h3" text="₦200,000.00" size="lg" weight="medium" />
+        <Text
+          variant="h3"
+          text={`₦${accountBalance}`}
+          size="lg"
+          weight="medium"
+        />
 
         <Text
           variant="h6"

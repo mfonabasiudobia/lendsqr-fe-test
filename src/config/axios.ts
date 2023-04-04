@@ -1,12 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = "https://sps.ascyteqlgsffkufz.pw/api/v1";
+const BASE_URL = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/";
 
 
 export default axios.create({
-			baseURL: BASE_URL,
-			headers: {
-				"Content-Type": "multipart/form-data",
-				Authorization: `Bearer`,
-			},
+	baseURL: BASE_URL
 });

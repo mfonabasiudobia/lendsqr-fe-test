@@ -66,63 +66,51 @@ const MainNavigation: React.FC = () => {
                     />
                     <Text
                       variant="span"
-                      text="MfonAbasi"
+                      text="Adedeji"
                       weight="medium"
                       className={styles["hide-from-mobile"]}
                     />
                     <IconButton size="sm" name="AiFillCaretDown" type="ai" />
                   </Box>
                 }
-                className="left-2 top-10 bg-white shadow-xl text-sm rounded inline-block py-2"
+                className="left-5 top-10 bg-white shadow-xl text-sm rounded-1 inline-block py-2"
               >
-                <List childrenClassName="pl-1 pr-4 py-1 text-xs text-primary">
-                  <ListItem
-                    LeftItem={
-                      <IconButton
-                        size="xl"
-                        name="MdOutlineDashboard"
-                        type="md"
-                        className="block"
-                      />
-                    }
-                    Item={<Text variant="span" text="Dashboard" />}
-                  />
-
-                  <ListItem
-                    LeftItem={
-                      <IconButton
-                        size="xl"
-                        name="AiOutlineSetting"
-                        type="ai"
-                        className="block"
-                      />
-                    }
-                    Item={<Text variant="span" text="Settings" />}
-                  />
-
-                  <ListItem
-                    LeftItem={
-                      <IconButton
-                        size="xl"
-                        name="MdDarkMode"
-                        type="md"
-                        className="block"
-                      />
-                    }
-                    Item={<Text variant="span" text="Dark Mode" />}
-                  />
-
-                  <ListItem
-                    LeftItem={
-                      <IconButton
-                        size="xl"
-                        name="AiOutlineLogout"
-                        type="ai"
-                        className="block"
-                      />
-                    }
-                    Item={<Text variant="span" text="Logout" />}
-                  />
+                <List childrenClassName="px-3 py-1 text-xs text-primary">
+                  {[
+                    {
+                      icon_name: "MdOutlineDashboard",
+                      icon_type: "md",
+                      title: "Dashboard",
+                    },
+                    {
+                      icon_name: "AiOutlineSetting",
+                      icon_type: "ai",
+                      title: "Settings",
+                    },
+                    {
+                      icon_name: "MdDarkMode",
+                      icon_type: "md",
+                      title: "Dark Mode",
+                    },
+                    {
+                      icon_name: "AiOutlineLogout",
+                      icon_type: "ai",
+                      title: "Logout",
+                    },
+                  ].map((item, index) => (
+                    <ListItem
+                      spacingX={2}
+                      LeftItem={
+                        <IconButton
+                          size="xs"
+                          name={item.icon_name}
+                          type={item.icon_type}
+                          className="block"
+                        />
+                      }
+                      Item={<Text variant="h2" text={item.title} />}
+                    />
+                  ))}
                 </List>
               </Dropdown>
             }
