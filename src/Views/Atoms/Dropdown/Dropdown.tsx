@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, RefObject } from "react";
 import { DropdownModel } from "./Models/DropdownModel";
 import useAtomicStyle from "@/Views/Hooks/useAtomicStyle";
 
@@ -18,7 +18,7 @@ const Dropdown: React.FC<DropdownModel> = ({
   spacing,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef: RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(e: Event) {
