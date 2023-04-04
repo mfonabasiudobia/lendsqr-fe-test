@@ -4,7 +4,40 @@ import DashboardTemplate from "@/Views/Templates/DashboardTemplate";
 import styles from "@/styles/global.module.scss";
 
 interface UserDetailsModel {
-  user: object;
+  user: {
+    accountNumber: number | string;
+    accountBalance: number;
+    userName: string;
+    profile: {
+      firstName: string;
+      lastName: string;
+      phoneNumber: string;
+      bvn: string;
+      gender: string;
+      address: string;
+      avatar: string;
+    };
+    guarantor: {
+      firstName: string;
+      lastName: string;
+      phoneNumber: string;
+    };
+    socials: {
+      twitter: string;
+      facebook: string;
+      instagram: string;
+    };
+    education: {
+      level: string;
+      employmentStatus: string;
+      sector: string;
+      duration: string;
+      officeEmail: string;
+      monthlyIncome: [];
+      loanRepayment: number;
+    };
+    email: string;
+  };
 }
 
 const UserDetails: React.FC<UserDetailsModel> = ({ user }) => {
