@@ -21,8 +21,11 @@ const Dropdown: React.FC<DropdownModel> = ({
   const dropdownRef: RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {
-    function handleClickOutside(e: Event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
@@ -52,7 +55,10 @@ const Dropdown: React.FC<DropdownModel> = ({
 
   return (
     <div ref={dropdownRef} className="relative inline-block">
-      <div onClick={setIsOpen} className="cursor-pointer">
+      <div
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="cursor-pointer"
+      >
         {Item}
       </div>
       {isOpen && (
