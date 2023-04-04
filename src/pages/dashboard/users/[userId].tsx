@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 import { axios } from "@config";
 
 interface UsersDetailsPageModel {
-  user: object;
+  user: any;
 }
 
 const UsersDetailsPage: React.FC<UsersDetailsPageModel> = ({ user }) => {
