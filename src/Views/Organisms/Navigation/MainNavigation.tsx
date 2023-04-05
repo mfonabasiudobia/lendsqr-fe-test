@@ -34,6 +34,7 @@ const MainNavigation: React.FC = () => {
       <Box>
         <List alignment="horizontal" spacingX={5}>
           <ListItem
+            className={styles["hide-from-mobile"]}
             Item={
               <TextLink
                 text="Docs"
@@ -45,6 +46,7 @@ const MainNavigation: React.FC = () => {
           />
 
           <ListItem
+            className={styles["hide-from-mobile"]}
             Item={<IconButton color="primary" name="AiOutlineBell" type="ai" />}
           />
 
@@ -75,7 +77,7 @@ const MainNavigation: React.FC = () => {
                 }
                 className="left-5 top-10 bg-white shadow-xl text-sm rounded-1 inline-block py-2"
               >
-                <List childrenClassName="px-3 py-1 text-xs text-primary">
+                {/* <List childrenClassName="px-3 py-1 text-xs text-primary">
                   {[
                     {
                       icon_name: "MdOutlineDashboard",
@@ -121,7 +123,7 @@ const MainNavigation: React.FC = () => {
                       />
                     )
                   )}
-                </List>
+                </List> */}
               </Dropdown>
             }
           />

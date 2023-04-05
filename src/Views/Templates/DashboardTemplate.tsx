@@ -33,7 +33,7 @@ const DashboardTemplate: React.FC<AuthTemplateModel> = ({ children }) => {
           elevation="xl"
           weight="bold"
           onClick={handleToggleDrawerNavigation}
-          className={`pl-5 rounded-r-full pt-2 w-14 h-14 bg-white absolute -left-7 top-0 z-20 ${styles["responsive-toggle-sidebar-btn"]}`}
+          className={`py-1 bg-white rounded-r-5 fixed -left-1 top-1/5 z-20 ${styles["responsive-toggle-sidebar-btn"]}`}
         />
 
         <Box padding="px-7 py-10 w-full overflow-hidden">{children}</Box>

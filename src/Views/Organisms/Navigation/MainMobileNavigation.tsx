@@ -10,7 +10,7 @@ const MainMobileNavigation: React.FC<MainMobileNavigationModel> = ({
     <Drawer
       isOpen={isOpen}
       closeDrawer={closeDrawer}
-      size="50vw"
+      size="70vw"
       className="flex flex-col"
       customIdSuffix="main-mobile-drawer"
     >
