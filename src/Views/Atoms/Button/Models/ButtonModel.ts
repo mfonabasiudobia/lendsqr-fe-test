@@ -7,5 +7,6 @@ export interface ButtonModel extends StyleModel {
   fullWidth?: boolean,
   type?: "button" | "submit",
   children?: ReactNode;
+  disabled? : boolean;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }

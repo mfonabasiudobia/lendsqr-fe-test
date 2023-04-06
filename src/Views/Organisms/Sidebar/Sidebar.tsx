@@ -1,4 +1,4 @@
-import { Box, Text, Image, Divider } from "@/Views/Atoms";
+import { Box, Text, Image, Divider, IconButton } from "@/Views/Atoms";
 import { List, ListItem, ListLinkItem } from "@/Views/Molecules";
 
 import UserFriends from "@svg/user-friends.svg";
@@ -37,12 +37,35 @@ const Sidebar: React.FC<SidebarModel> = ({ isMobile }) => {
   return (
     <Box
       className={`${
-        isMobile ? "w-full" : styles["responsive-sidebar-wrapper"]
+        isMobile
+          ? "w-full"
+          : styles["responsive-sidebar-wrapper"] + " sticky h-full -top-1/2"
       }`}
       padding="py-5"
       elevation="md"
       spacingY={7}
     >
+      <ListLinkItem
+        href="/"
+        className={getStyle(false)}
+        LeftItem={
+          <Image
+            src={BriefcaseIcon}
+            alt="Switch Organization Icon"
+            fill={false}
+          />
+        }
+        Item={<Text text="Switch Organization" />}
+        RightItem={
+          <IconButton
+            type="bs"
+            name="BsChevronDown"
+            size="md"
+            className="inline-block"
+          />
+        }
+      />
+
       <ListLinkItem
         href="/"
         className={getStyle(false)}

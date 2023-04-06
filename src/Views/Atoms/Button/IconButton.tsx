@@ -5,6 +5,7 @@ const IconButton: React.FC<IconButtonModel> = ({
   variant,
   className,
   elevation,
+  disabled = false,
   size,
   color,
   margin,
@@ -67,7 +68,11 @@ const IconButton: React.FC<IconButtonModel> = ({
   const Myicon = getIconType();
 
   return (
-    <button onClick={onClick} className={`${Object.values(styles).join(" ")}`}>
+    <button
+      onClick={onClick}
+      className={`${Object.values(styles).join(" ")}`}
+      disabled={disabled}
+    >
       <Myicon />
     </button>
   );

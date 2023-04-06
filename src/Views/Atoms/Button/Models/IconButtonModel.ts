@@ -5,5 +5,6 @@ export interface IconButtonModel extends StyleModel {
   variant?: "contained" | "outlined" | undefined;
   name: string;
   type: "ai" | "bs" | "hi" | "fi" | "bi" | "fa" | "md" | "io" | "ci";
+  disabled? : boolean;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }

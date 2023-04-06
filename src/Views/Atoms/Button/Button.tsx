@@ -16,6 +16,7 @@ const Button: React.FC<ButtonModel> = ({
   spacingX,
   spacingY,
   spacing,
+  disabled = false,
   text,
   onClick,
   children,
@@ -38,7 +39,7 @@ const Button: React.FC<ButtonModel> = ({
       spacingY,
       spacing,
     }),
-    variantClass: `text-center inline-block px-5 py-2
+    variantClass: `text-center inline-block
     ${
       variant === "text"
         ? ""
@@ -46,7 +47,7 @@ const Button: React.FC<ButtonModel> = ({
         ? `${getBackgroundColor()} text-white hover:bg-opacity-90`
         : variant === "outlined"
         ? `border-1 rounded-1 ${getBorderColor()} hover:bg-opacity-90`
-        : null
+        : "px-5 py-2"
     }`,
     fullWidthStyle: fullWidth ? "w-full" : null,
   };
@@ -56,6 +57,7 @@ const Button: React.FC<ButtonModel> = ({
       type={type}
       className={`${Object.values(styles).join(" ")}`}
       onClick={onClick}
+      disabled={disabled}
     >
       {text ? text : children}
     </button>
