@@ -35,7 +35,7 @@ Clone the repository to your local machine.
 
 Install the dependencies by running npm install or yarn install in the project root directory.
 
-Start the development server by running npm start or yarn start in the project root directory.
+Start the development server by running npm run dev in the project root directory.
 
 ## Conclusion
 
