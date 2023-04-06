@@ -1,7 +1,9 @@
-#Frontend Developer Test
+## Frontend Developer Test
+
 This is a solution to the frontend developer test by LendSQR. It is hosted on Vercel at https://mfonabasi-isaac-udobia-lendsqr-fe-test.vercel.app.
 
-#Technologies Used
+## Technologies Used
+
 The project was built with the following technologies:
 
 Nextjs - A React.js Framework for building user interfaces.
@@ -9,13 +11,13 @@ TypeScript - A strongly typed programming language that builds on JavaScript.
 Axios - A promise-based HTTP client for making API requests.
 SASS - For Styling
 
-#Possible Links
+## Possible Links
 
 1. https://mfonabasi-isaac-udobia-lendsqr-fe-test.vercel.app - Login Page
 2. https://mfonabasi-isaac-udobia-lendsqr-fe-test.vercel.app/dashboard/users - Users List Page
 3. https://mfonabasi-isaac-udobia-lendsqr-fe-test.vercel.app/dashboard/users/{id} - User Details Page
 
-#Project Structure/ Architecture
+## Project Structure/ Architecture
 
 I decided to adopt an enterprise level Architecture for the project which is the ATOMIC Design Pattern. The project is structured using the Atomic Design pattern, which consists of five distinct stages:
 
@@ -25,7 +27,8 @@ Organisms - Groups of molecules that form a distinct section of a page. Examples
 Templates - The basic layout for a page that defines the placement of organisms. Examples of templates include landing pages, product pages, and checkout pages.
 Pages - The final stage where templates are populated with content to create a fully functional web page.
 
-#Running the Application
+## Running the Application
+
 To run the application locally, follow these steps:
 
 Clone the repository to your local machine.
@@ -34,10 +37,11 @@ Install the dependencies by running npm install or yarn install in the project r
 
 Start the development server by running npm start or yarn start in the project root directory.
 
-#Conclusion
+## Conclusion
+
 This is a basic implementation of the LendSQR frontend developer test. The project can be extended by adding more features and improving the user interface.
 
-#Important Features/Details I think was left out in the design
+## Important Features/Details I think was left out in the design
 
 1. There are some important features/details that I believe were not included in the design, such as implementing a dark mode.
 2. I noticed that there was no dropdown menu available when users clicked on the profile photo icon.
