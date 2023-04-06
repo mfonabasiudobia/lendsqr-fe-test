@@ -4,8 +4,11 @@ import { routes } from "@config";
 import PabloSignIn from "@svg/pablo-sign-in.svg";
 import AuthTemplate from "@/Views/Templates/AuthTemplate";
 import style from "./Styles/HomeStyle.module.scss";
+import { useRouter, NextRouter } from "next/router";
 
 const Home: React.FC = () => {
+  const router: NextRouter = useRouter();
+
   return (
     <AuthTemplate>
       <Box className={`${style["login-wrapper"]}`}>
@@ -58,10 +61,11 @@ const Home: React.FC = () => {
             </Box>
 
             <Button
-              type="submit"
+              type="button"
               variant="contained"
               fullWidth
               size="sm"
+              onClick={() => router.push("/dashboard/users")}
               padding="py-3"
               text="LOG IN"
               color="white"

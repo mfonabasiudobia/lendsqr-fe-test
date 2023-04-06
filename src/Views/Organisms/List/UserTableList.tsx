@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Text, IconButton, Dropdown, Button, Box, Form } from "@/Views/Atoms";
 import { List, ListLinkItem, ListItem, TextInput } from "@/Views/Molecules";
 import { Pagination } from "@/Views/Organisms";
-import { useRouter, NextRouter } from "next/router";
 import Moment from "react-moment";
 import moment from "moment";
 
@@ -11,8 +10,6 @@ interface UserTableListModel {
 }
 
 const UserTableList: React.FC<UserTableListModel> = ({ users }) => {
-  const router: NextRouter = useRouter();
-
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
 
