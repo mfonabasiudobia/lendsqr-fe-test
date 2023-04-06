@@ -3,7 +3,7 @@ import { StyleModel } from "@/Views/Hooks/Models";
 export interface TextInputModel extends StyleModel {
     variant?: "outlined" | "filled" | "standard";
     label?: string;
-    type?: "text" | "email" | "password";
+    type?: "text" | "email" | "password" | "date";
     id?: string;
     defaultValue?: string | number;
     disabled?: boolean;

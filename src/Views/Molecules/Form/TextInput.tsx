@@ -36,7 +36,7 @@ const Button: React.FC<TextInputModel> = ({
   };
 
   return (
-    <div>
+    <div className="space-y-2">
       {label && <label>{label}</label>}
       <div className="relative">
         <input

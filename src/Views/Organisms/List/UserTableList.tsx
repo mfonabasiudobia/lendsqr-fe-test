@@ -109,9 +109,9 @@ const UserTableList: React.FC<UserTableListModel> = ({ users }) => {
       <Dropdown
         Item={<IconButton type="bs" name="BsFilter" size="md" />}
         elevation="md"
-        className="left-1 top-0 z-50 bg-white rounded-2 w-80 p-5"
+        className="left-1 top-0 z-50 bg-white rounded-2 w-60 p-5"
       >
-        <Form spacingY={4}>
+        <Form spacingY={4} weight="normal">
           <TextInput
             label="Username"
             size="md"
@@ -126,16 +126,49 @@ const UserTableList: React.FC<UserTableListModel> = ({ users }) => {
             placeholder="Email"
           />
 
-          <Box>
+          <TextInput
+            size="md"
+            label="Date"
+            type="date"
+            className="text-sm w-full border-l-1 border-t-1 border-b-1 border-r-1"
+            placeholder="Date"
+          />
+
+          <TextInput
+            size="md"
+            label="Phone number"
+            className="text-sm w-full border-l-1 border-t-1 border-b-1 border-r-1"
+            placeholder="Phone number"
+          />
+
+          <TextInput
+            size="md"
+            label="Status"
+            className="text-sm w-full border-l-1 border-t-1 border-b-1 border-r-1"
+            placeholder="Select"
+          />
+
+          <Box className="flex items-center justify-between space-x-5">
+            <Button
+              type="submit"
+              variant="outlined"
+              fullWidth
+              size="sm"
+              padding="py-3"
+              text="Reset"
+              color="primary"
+              className="border-1 border-primary rounded-1"
+            />
+
             <Button
               type="submit"
               variant="contained"
               fullWidth
               size="sm"
               padding="py-3"
-              text="LOG IN"
+              text="Filter"
               color="white"
-              className="bg-accent"
+              className="bg-accent rounded-1"
             />
           </Box>
         </Form>
